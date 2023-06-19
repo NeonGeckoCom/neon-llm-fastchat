@@ -38,10 +38,10 @@ class FastChat:
     @staticmethod
     def convert_role(role):
         if role == "user":
-            role_chatgpt = "user"
+            role_fastchat = "user"
         elif role == "llm":
-            role_chatgpt = "assistant"
-        return role_chatgpt
+            role_fastchat = "assistant"
+        return role_fastchat
 
     def ask(self, message, chat_history):
         messages = [
@@ -49,8 +49,8 @@ class FastChat:
         ]
         # Context N messages
         for role, content in chat_history[-self.context_depth:]:
-            role_chatgpt = self.convert_role(role)
-            messages.append({"role": role_chatgpt, "content": content})
+            role_fastchat = self.convert_role(role)
+            messages.append({"role": role_fastchat, "content": content})
         messages.append({"role": "user", "content": message})
         
         response = openai.ChatCompletion.create(

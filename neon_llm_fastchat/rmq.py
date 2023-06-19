@@ -41,8 +41,8 @@ class FastchatMQ(MQConnector):
 
     def __init__(self):
         config = load_config()
-        chatgpt_config = config.get("FastChat", None)
-        self.fastChat = FastChat(chatgpt_config)
+        fastchat_config = config.get("FastChat", None)
+        self.fastChat = FastChat(fastchat_config)
 
         self.service_name = 'neon_llm_fastchat'
 
@@ -65,7 +65,7 @@ class FastchatMQ(MQConnector):
                        body: dict):
         """
         Handles requests from MQ to FastChat received on queue
-        "request_chatgpt"
+        "request_fastchat"
 
         :param channel: MQ channel object (pika.channel.Channel)
         :param method: MQ return method (pika.spec.Basic.Return)
