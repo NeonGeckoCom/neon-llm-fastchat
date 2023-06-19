@@ -27,7 +27,7 @@
 import openai
 
 
-class ChatGPT:
+class FastChat:
     def __init__(self, config):
         self.model = config["model"]
         self.role = config["role"]

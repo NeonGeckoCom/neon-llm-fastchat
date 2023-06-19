@@ -31,7 +31,7 @@ from neon_mq_connector.utils.network_utils import dict_to_b64
 from neon_mq_connector.utils.rabbit_utils import create_mq_callback
 from ovos_utils.log import LOG
 
-from neon_llm_fastchat.fastchat import ChatGPT
+from neon_llm_fastchat.fastchat import FastChat
 from neon_llm_fastchat.config import load_config
 
 
@@ -41,8 +41,8 @@ class FastchatMQ(MQConnector):
 
     def __init__(self):
         config = load_config()
-        chatgpt_config = config.get("ChatGPT", None)
-        self.chatGPT = ChatGPT(chatgpt_config)
+        chatgpt_config = config.get("FastChat", None)
+        self.fastChat = FastChat(chatgpt_config)
 
         self.service_name = 'neon_llm_fastchat'
 
@@ -64,7 +64,7 @@ class FastchatMQ(MQConnector):
                        method: pika.spec.Basic.Return,
                        body: dict):
         """
-        Handles requests from MQ to ChatGPT received on queue
+        Handles requests from MQ to FastChat received on queue
         "request_chatgpt"
 
         :param channel: MQ channel object (pika.channel.Channel)
@@ -77,7 +77,7 @@ class FastchatMQ(MQConnector):
         query = body["query"]
         history = body["history"]
 
-        response = self.chatGPT.ask(message=query, chat_history=history)
+        response = self.fastChat.ask(message=query, chat_history=history)
 
         api_response = {
             "message_id": message_id,

@@ -1,5 +1,5 @@
-# NeonAI LLM ChatGPT
-Proxies API calls to ChatGPT.
+# NeonAI LLM FastChat
+Proxies API calls to FastChat.
 
 ## Request Format
 API requests should include `history`, a list of tuples of strings, and the current
@@ -28,7 +28,7 @@ MQ:
     mq-fastchat-api:
       password: <neon_fastchat user's password>
       user: neon_fastchat
-ChatGPT:
+FastChat:
   key: ""
   model: "gpt-3.5-turbo"
   role: "You are trying to give a short answer in less than 40 words."
