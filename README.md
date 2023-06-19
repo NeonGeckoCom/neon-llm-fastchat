@@ -25,9 +25,9 @@ MQ:
   port: <MQ Port>
   server: <MQ Hostname or IP>
   users:
-    mq-chatgpt-api:
-      password: <neon_chatgpt user's password>
-      user: neon_chatgpt
+    mq-fastchat-api:
+      password: <neon_fastchat user's password>
+      user: neon_fastchat
 ChatGPT:
   key: ""
   model: "gpt-3.5-turbo"

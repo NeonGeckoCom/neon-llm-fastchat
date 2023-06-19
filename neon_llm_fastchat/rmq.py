@@ -35,7 +35,7 @@ from neon_llm_fastchat.fastchat import ChatGPT
 from neon_llm_fastchat.config import load_config
 
 
-class ChatgptMQ(MQConnector):
+class FastchatMQ(MQConnector):
     """
     Module for processing MQ requests from PyKlatchat to LibreTranslate"""
 
@@ -44,13 +44,13 @@ class ChatgptMQ(MQConnector):
         chatgpt_config = config.get("ChatGPT", None)
         self.chatGPT = ChatGPT(chatgpt_config)
 
-        self.service_name = 'neon_llm_chatgpt'
+        self.service_name = 'neon_llm_fastchat'
 
         mq_config = config.get("MQ", None)
         super().__init__(config=mq_config, service_name=self.service_name)
 
         self.vhost = "/llm"
-        self.queue = "chat_gpt_input"
+        self.queue = "fastchat_input"
         self.register_consumer(name=self.service_name,
                                vhost=self.vhost,
                                queue=self.queue,
