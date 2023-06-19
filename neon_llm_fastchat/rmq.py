@@ -31,8 +31,8 @@ from neon_mq_connector.utils.network_utils import dict_to_b64
 from neon_mq_connector.utils.rabbit_utils import create_mq_callback
 from ovos_utils.log import LOG
 
-from neon_llm_chatgpt.chatgpt import ChatGPT
-from neon_llm_chatgpt.config import load_config
+from neon_llm_fastchat.chatgpt import ChatGPT
+from neon_llm_fastchat.config import load_config
 
 
 class ChatgptMQ(MQConnector):

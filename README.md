@@ -39,6 +39,6 @@ ChatGPT:
 For example, if your configuration resides in `~/.config`:
 ```shell
 export CONFIG_PATH="/home/${USER}/.config"
-docker run -v ${CONFIG_PATH}:/config neon_llm_chatgpt
+docker run -v ${CONFIG_PATH}:/config neon_llm_fastchat
 ```
 > Note: If connecting to a local MQ server, you may need to specify `--network host`
