@@ -29,9 +29,7 @@ MQ:
       password: <neon_fastchat user's password>
       user: neon_fastchat
 FastChat:
-  key: ""
-  model: "gpt-3.5-turbo"
-  role: "You are trying to give a short answer in less than 40 words."
+  model: "fastchat"
   context_depth: 3
   max_tokens: 256
 ```
