@@ -33,7 +33,7 @@ FastChat:
   model: "gpt-3.5-turbo"
   role: "You are trying to give a short answer in less than 40 words."
   context_depth: 3
-  max_tokens: 100
+  max_tokens: 256
 ```
 
 For example, if your configuration resides in `~/.config`:
