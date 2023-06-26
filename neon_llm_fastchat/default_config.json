@@ -3,7 +3,7 @@
         "server": "localhost",
         "port": "5672",
         "users": {
-            "mq-fastchat-api": {
+            "neon_llm_fastchat": {
                 "user": "",
                 "password": ""
             }

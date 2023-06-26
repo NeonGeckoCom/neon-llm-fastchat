@@ -25,7 +25,7 @@ MQ:
   port: <MQ Port>
   server: <MQ Hostname or IP>
   users:
-    mq-fastchat-api:
+    neon_llm_fastchat:
       password: <neon_fastchat user's password>
       user: neon_fastchat
 FastChat:
