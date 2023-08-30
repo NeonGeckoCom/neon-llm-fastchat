@@ -1,6 +1,7 @@
 # model
 ctranslate2
-transformers
+transformers==4.32.1
+protobuf
 SentencePiece
 # networking
 neon_llm_core==0.0.6
