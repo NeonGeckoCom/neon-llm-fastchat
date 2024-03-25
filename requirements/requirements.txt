@@ -4,4 +4,4 @@ transformers==4.32.1
 protobuf
 SentencePiece
 # networking
-neon_llm_core==0.0.6
+neon_llm_core[chatbots]~=0.1.0,>=0.1.1a2
